@@ -1,6 +1,6 @@
 module Bands
   class BandsController < ApplicationController
-    before_filter :authenticate_user!, except: [:show, :index]
+    before_filter :authenticate_user!#, except: [:show, :index]
 
     def show
       @band = Band.find(params[:id])

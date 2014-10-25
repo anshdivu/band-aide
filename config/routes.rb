@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   mount Upmin::Engine => '/admin'
   root to: 'bands/bands#index'
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
