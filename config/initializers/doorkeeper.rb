@@ -8,7 +8,6 @@ Doorkeeper.configure do
     fail "Please configure doorkeeper resource_owner_authenticator block located in #{__FILE__}"
     # Put your resource owner authentication logic here.
     # Example implementation:
-    binding.pry
     User.find_by_id(session[:user_id]) || redirect_to(new_user_session_url)
     # 4e71cddf6ee227be57bc7b5c1224f32052d3f11dc8a875f2b73e198ccbc5a010
       current_user || warden.authenticate!(:scope => :user)
